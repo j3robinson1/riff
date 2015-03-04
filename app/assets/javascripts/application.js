@@ -15,6 +15,7 @@
 //= require angular/angular
 //= require angular-route/angular-route
 //= require angular-rails-templates
+//= require underscore.min
 //= require_self
 //= require_tree .
 

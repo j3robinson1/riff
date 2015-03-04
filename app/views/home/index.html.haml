@@ -1,0 +1,14 @@
+%h1 aLaCarte home
+= link_to 'Things', things_path
+%div{ 'ng-controller':  'indexCtrl' }
+  {{ some_text.thing }} - {{ some_text.thingType }}
+  %br
+  %button{ 'ng-click': 'changeQuote()' } New Thing, please.
+  %ul
+    %li{ 'ng-repeat': 'quote in quotes.quotes' }
+      {{ thing.thing }} - {{ thing.thing_type }}
+      %button{ 'ng-click': 'deleteQuote(quote.id)' } Delete
+  %form{'ng-submit': "submitForm()"}
+    %input{type: "text", placeholder: 'Thing', 'ng-model': 'formThing'}
+    %input{type: "text", placeholder: 'Thing Type', 'ng-model': 'formThingType'}
+    %input{type: "submit"}
