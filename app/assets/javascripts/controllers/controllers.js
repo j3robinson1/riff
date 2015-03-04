@@ -1,18 +1,18 @@
-var indexCtrl = thingKeeper.controller('indexCtrl', function($scope, quoteData) {
+var indexCtrl = aLaCarte.controller('indexCtrl', function($scope, thingData) {
     $scope.some_text = {quote: "test test test test test", thingType: "FIVE"};
     $scope.things = thingData.data;
     $scope.formThing = '';
     $scope.formThingType = '';
     thingData.loadThings();
-    $scope.changeQuote = function() {      
+    $scope.changeThing = function() {      
       $scope.some_text = _.sample($scope.things.things);
     };
 
     $scope.submitForm = function() {
-      quoteData.addQuote(
+      thingData.addThing(
         {
-          quote: {
-            quote: $scope.formThing, quote_master: $scope.formThingType
+          thing: {
+            thing: $scope.formThing, thing_type: $scope.formThingType
           }
         }
       );
@@ -20,7 +20,7 @@ var indexCtrl = thingKeeper.controller('indexCtrl', function($scope, quoteData) 
       $scope.formThingType = '';
     };
 
-    $scope.deleteThing = function(quoteId) {
+    $scope.deleteThing = function(thingId) {
       quoteThing.deleteThing(thingId);
     }
 });

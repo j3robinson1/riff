@@ -1,4 +1,4 @@
-thingKeeper.factory('thingData', function($http) {
+aLaCarte.factory('thingData', function($http) {
   thingData = {
     data: {
       things: [
@@ -32,7 +32,7 @@ thingKeeper.factory('thingData', function($http) {
       var deletedThing = _.findWhere( thingData.data.things, {id: parseInt(thingId)})
       console.log(thingData.data.things)
       thingData.data.things = _.without(thingData.data.things, deletedThing)
-      console.log(quoteData.data.quotes)
+      console.log(thingData.data.things)
     })
   }
   // quoteData.data.quotes[0].quote

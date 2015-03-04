@@ -1,5 +1,5 @@
-var addressBook = angular
-  .module('addressBook', [])
+var aLaCarte = angular
+  .module('aLaCarte', [])
   .config(function($httpProvider) {
     $httpProvider.defaults.headers.common['X-CSRF-Token'] = $("meta[name=csrf-token]").attr("content");
   })
