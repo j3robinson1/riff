@@ -5,10 +5,9 @@ aLaCarte.factory('thingData', function($http) {
       ]
     }
   }
-
   thingData.loadThings = function() {
     // $.ajax.get("/quotes.json")
-    $http.get("/things.json").success(functionthingsFromServer) {
+    $http.get("/things.json").success(function (thingsFromServer) {
       // console.log(quotesFromServer);        
       _.each(thingsFromServer, function(thing){
         thingData.pushThing(thing)  

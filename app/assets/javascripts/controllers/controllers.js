@@ -1,10 +1,11 @@
 var indexCtrl = aLaCarte.controller('indexCtrl', function($scope, thingData) {
-    $scope.some_text = {quote: "test test test test test", thingType: "FIVE"};
+    $scope.some_text = {thing: "test test test test test", thingType: "FIVE"};
+    $scope.month = "july";
     $scope.things = thingData.data;
     $scope.formThing = '';
     $scope.formThingType = '';
     thingData.loadThings();
-    $scope.changeThing = function() {      
+    $scope.changeThing = function() {    
       $scope.some_text = _.sample($scope.things.things);
     };
 

@@ -3,6 +3,8 @@
 %div{ 'ng-controller':  'indexCtrl' }
   {{ some_text.thing }} - {{ some_text.thingType }}
   %br
+  {{ month }}
+  %br
   %button{ 'ng-click': 'changeThing()' } New Thing, please.
   %ul
     %li{ 'ng-repeat': 'thing in things.things' }
