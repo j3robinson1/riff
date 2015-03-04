@@ -1,99 +1,17 @@
-== README
+aLaCarte
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
+* ruby version 2.2.0
 
 * System dependencies
 
 * Configuration
 
-* Database creation
+* rake db:create
 
-* Database initialization
+* rake db:migrate
 
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
-aLaCarte = angular.module('aLaCarte',[
-  'templates',
-  'ngRoute',
-  'controllers',
-])
-
-aLaCarte.config([ '$routeProvider',
-  ($routeProvider)->
-    $routeProvider
-      .when('/',
-        templateUrl: "index.html"
-        controller: 'RecipesController'
-      )
-])
-
-controllers = angular.module('controllers',[])
-controllers.controller("RecipesController", [ '$scope',
-  ($scope)->
-])
-
->>>>>>>>>>>>>>>>
-
-FROM app/assets/javascripts/templates/index.html
-
-<header class="row">
-  <h1 class="text-center col-md-6 col-md-offset-3">Find Recipes</h1>
-</header>
-<section class="row">
-  <form>
-    <div class="form-group col-md-6 col-md-offset-3">
-      <label for="keywords" class="sr-only">Keywords</label>
-      <input type="text" autofocus class="form-control" placeholder="Recipe name, e.g. Baked Potato">
-    </div>
-    <div class="form-group col-md-6 col-md-offset-3 text-center">
-      <button class="btn btn-primary btn-lg">Search</button>
-    </div>
-  </form>
-</section>
-<hr>
-<section class="row">
-  <h1 class="text-center h2">Results</h1>
-  <section class="well col-md-6 col-md-offset-3">
-    <h1 class="h3 col-md-6 text-right" style="margin-top: 0"><a href="#">Baked Potato w/ Cheese</a></h1>
-    <div class="col-md-6">
-      <button class="btn btn-info">Edit</button>
-      <button class="btn btn-danger">Delete</button>
-    </div>
-  </section>
-  <section class="well col-md-6 col-md-offset-3">
-    <h1 class="h3 col-md-6 text-right" style="margin-top: 0"><a href="#">Garlic Mashed Potatoes</a></h1>
-    <div class="col-md-6">
-      <button class="btn btn-info">Edit</button>
-      <button class="btn btn-danger">Delete</button>
-    </div>
-  </section>
-  <section class="well col-md-6 col-md-offset-3">
-    <h1 class="h3 col-md-6 text-right" style="margin-top: 0"><a href="#">Potatos Au Gratin</a></h1>
-    <div class="col-md-6">
-      <button class="btn btn-info">Edit</button>
-      <button class="btn btn-danger">Delete</button>
-    </div>
-  </section>
-</section>
-
->>>>>>>>>>>>>>>>>
-from app/views/    /index.html.haml
-
-%div{"ng-app" => "aLaCarte"}
-  .view-container
-    .view-frame.animate-view{"ng-view" => ""}
