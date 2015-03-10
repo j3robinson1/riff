@@ -1,17 +1,31 @@
-aLaCarte
+riff
 
-* ruby version 2.2.0
+Tuesday, 3-10-2015 3:55pm
 
-* System dependencies
+App Description:
+ Riff creates an organic musical conversation between users by allowing them to record spontaneous thoughts in the form of a 30-second audio clip.  The user can either upload a new recording or "riff" on another user's recording in the same form of a 30-second audio clip.  A user across the world will be able to hear a previously posted riff and respond immediately with his/her own musical layer.
 
-* Configuration
+ The MVP will feature 8 tracks of test audio that can be played separately or at the same time via media player stop/start buttons.  Future rollouts beyond the MVP will allow users to upload their own audio riffs as well as press record and submit.
 
-* rake db:create
+Preferred Technologies:
+- Rails
+- HTML
+- CSS
+- SASS
+- Javascript
+- Angular
+- Bower
+- Heroku
+- GitHub
+- Devise
+- Haml
+- audio API of our choice
+- AWS S3
 
-* rake db:migrate
 
-* How to run the test suite
+Challenges:
+We are both new to using audio as a medium in general, and we will be learning about device media permissions, storing and retrieving files from AWS, and handling real-time stop/start functionality.
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+Riff on!
+-Robbi and Chris

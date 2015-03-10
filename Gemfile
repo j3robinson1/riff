@@ -1,10 +1,19 @@
 source 'https://rubygems.org'
 
+gem 'devise'
 gem 'haml-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'pg'
+
+# group :development, :test do
+#  gem 'pg', '0.13.2'
+# end  
+
+# group :production do
+#  gem 'pg', '0.13.2'
+# end 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

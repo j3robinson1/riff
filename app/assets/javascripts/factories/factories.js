@@ -1,41 +1,53 @@
-aLaCarte.factory('thingData', function($http) {
-  thingData = {
+addressBook.factory('quoteData', function($http) {
+  quoteData = {
     data: {
-      things: [
+      quotes: [
       ]
+    },
+    isLoaded: false
+  }
+
+  quoteData.loadQuotes = function(deferred) {
+    // $.ajax.get("/quotes.json")
+    if(quoteData.isLoaded == false){
+      $http.get("/quotes.json").success(function(quotesFromServer) {
+        console.log(quotesFromServer);
+        quoteData.isLoaded = true;
+        _.each(quotesFromServer, function(quote){
+          quoteData.pushQuote(quote)  
+        })
+        if(deferred) {
+          deferred.resolve()
+        }
+      });
     }
   }
-  thingData.loadThings = function() {
-    // $.ajax.get("/quotes.json")
-    $http.get("/things.json").success(function (thingsFromServer) {
-      // console.log(quotesFromServer);        
-      _.each(thingsFromServer, function(thing){
-        thingData.pushThing(thing)  
-      })
-    });
-  }
 
-  thingData.addThing = function(thing) {
-    $http.post('/things.json', thing).success(function(thingFromServer){
-      thingData.pushThing(thingFromServer);
+  quoteData.addQuote = function(quote) {
+    $http.post('/quotes.json', quote).success(function(quoteFromServer){
+      quoteData.pushQuote(quoteFromServer);
     })
   }
 
-  thingData.pushThing = function(thing) {
-    thingData.data.things.push(thing);
+  quoteData.pushQuote = function(quote) {
+    quoteData.data.quotes.push(quote);
   }
 
-  thingData.deleteThing = function(thingId) {
-    $http.delete("/things/" + thingId + ".json").success(function(data) {
-      console.log("Success");
-      var deletedThing = _.findWhere( thingData.data.things, {id: parseInt(thingId)})
-      console.log(thingData.data.things)
-      thingData.data.things = _.without(thingData.data.things, deletedThing)
-      console.log(thingData.data.things)
+  quoteData.deleteQuote = function(quoteId) {
+    $http.delete("/quotes/" + quoteId + ".json").success(function(data) {
+      console.log("SUccess");
+      var deletedQuote = quoteData.findQuote(quoteId);
+      console.log(quoteData.data.quotes)
+      quoteData.data.quotes = _.without(quoteData.data.quotes, deletedQuote)
+      console.log(quoteData.data.quotes)
     })
+  }
+
+  quoteData.findQuote = function(quoteId) {
+    return _.findWhere( quoteData.data.quotes, {id: parseInt(quoteId)});
   }
   // quoteData.data.quotes[0].quote
   // quoteData.data.quotes[0].quoteMaster
 
-  return thingData;
+  return quoteData;
 })
