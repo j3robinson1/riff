@@ -24,7 +24,7 @@ Preferred Technologies:
 
 
 Challenges:
-We are both new to using audio as a medium in general, and we will be learning about device media permissions, storing and retrieving files from AWS, and handling real-time stop/start functionality.
+We are all new to using audio as a medium in general, and we will be learning about device media permissions, storing and retrieving files from AWS, and handling real-time stop/start functionality.
 
 
 Riff on!
