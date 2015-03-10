@@ -13,16 +13,11 @@
 
 ActiveRecord::Schema.define(version: 20150310222759) do
 
-  create_table "quotes", force: :cascade do |t|
-    t.text     "quote",        limit: 65535
-    t.text     "quote_master", limit: 65535
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-  end
-
   create_table "things", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "thing",      limit: 65535
+    t.text     "thing_type", limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "users", force: :cascade do |t|
