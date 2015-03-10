@@ -29,3 +29,16 @@ We are all new to using audio as a medium in general, and we will be learning ab
 
 Riff on!
 -Robbi, Chris, and Jesse
+
+###########################################
+
+CONFIG:
+- use Sequel Pro db
+- gem install rails
+- cd ..
+- cd riff
+- bundle install
+- rake db:create
+- rake db:migrate
+- rake routes to see routes as they are currently set up (i.e. localport:3000/users/sign_in)
+- rails s
