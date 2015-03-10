@@ -21,6 +21,7 @@ Preferred Technologies:
 - Haml
 - audio API of our choice
 - AWS S3
+- mysql
 
 
 Challenges:

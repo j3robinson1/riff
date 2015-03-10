@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: aLaCarte_production
-  username: aLaCarte
-  password: <%= ENV['RECETA_DATABASE_PASSWORD'] %>
+  database: riff_production
+  username: riff
+  password: <%= ENV['RIFF_DATABASE_PASSWORD'] %>
